@@ -1,0 +1,37 @@
+{
+  "Class9": {
+    "Science": {
+      "CSE": {
+        "Wings": {
+          "SoftwareDeveloper": {
+            "Paths": {
+              "Job": {
+                "Opportunities": [
+                  {
+                    "Opportunity1": {
+                      "GlobalSalary": "amount",
+                      "LocalSalary": "amount"
+                    }
+                  },
+                  {
+                    "Opportunity2": {
+                      "GlobalSalary": "amount",
+                      "LocalSalary": "amount"
+                    }
+                  }
+                ]
+              },
+              "HigherStudies": {
+                "Paths": {
+                  "Masters": {},
+                  "Research": {}
+                }
+              }
+            }
+          },
+          "DataScience": {}
+        }
+      }
+    }
+  }
+}
