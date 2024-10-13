@@ -8,7 +8,7 @@ const data = [
     name: "Science",
     description:
       "Explore the fascinating world of science, technology, and innovations.",
-    imageUrl: "/public/science.gif",
+    imageUrl: "/science.gif",
     pageUrl: "/science",
   },
   {
@@ -16,7 +16,7 @@ const data = [
     name: "Arts",
     description:
       "Delve into the realm of creativity, culture, and artistic expression.",
-    imageUrl: "/public/law.gif",
+    imageUrl: "/law.gif",
     pageUrl: "/arts",
   },
   {
@@ -24,7 +24,7 @@ const data = [
     name: "Commerce",
     description:
       "Understand the mechanics of business, economics, and financial systems.",
-    imageUrl: "/public/commerce.gif",
+    imageUrl: "/commerce.gif",
     pageUrl: "/commerce",
   },
 ];

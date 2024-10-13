@@ -7,10 +7,10 @@ const app = express();
 const port = process.env.PORT || 9000;
 
 const authRoutes = require("./routes/authRoutes");
-const userRoutes = require("./routes/userRoutes");
+const exploreCareerPath = require("./routes/exploreCareerPath");
 
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: ["http://localhost:5173"],
   credentials: true,
   optionSuccessStatus: 200,
 };
@@ -19,7 +19,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/auth", authRoutes);
-app.use("/user", userRoutes);
+app.use("/explore", exploreCareerPath);
 
 app.get("/", (req, res) => {
   res.send("GuideU Server is Alive...");
