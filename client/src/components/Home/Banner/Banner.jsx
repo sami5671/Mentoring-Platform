@@ -23,18 +23,18 @@ const Banner = () => {
 
         {/* Left Floating Image */}
         <div
-          className="absolute top-1/2 lg:top-1/4 left-10 w-32 h-32 lg:w-48 lg:h-48 bg-cover bg-center bg-no-repeat transform animate-float-left"
+          className="absolute top-16 lg:gap-0 lg:top-1/4 left-10 w-32 h-32 lg:w-48 lg:h-48 bg-cover bg-center bg-no-repeat transform animate-float-left"
           style={{ backgroundImage: `url("/menteeBall.gif")` }}
         ></div>
 
         {/* Right Floating Image */}
         <div
-          className="absolute top-1/2 lg:top-1/4 right-10 w-32 h-32 lg:w-48 lg:h-48 bg-cover bg-center bg-no-repeat transform animate-float-right"
+          className="absolute top-16 lg:top-1/4 right-10 w-32 h-32 lg:w-48 lg:h-48 bg-cover bg-center bg-no-repeat transform animate-float-right"
           style={{ backgroundImage: `url("/menteeJob.gif")` }}
         ></div>
 
         {/* Text section */}
-        <div className="text-center mt-8 lg:mt-0 max-w-3xl px-4 opacity-95">
+        <div className="text-center mt-24 lg:mt-0 max-w-3xl px-4 opacity-95">
           <h1 className="text-4xl lg:text-7xl leading-tight font-bold">
             <span className="bg-gradient-to-tr from-black to-cyan-500 text-transparent bg-clip-text">
               Your journey,

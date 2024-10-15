@@ -4,17 +4,26 @@
 @tailwind utilities;
 
 .layout-css {
+  /* background: linear-gradient(to bottom right, #b3e5fc, #f2ffe0, #e0f7fa); */
+  /* background: linear-gradient(to bottom right, #cec2f8, #f0fae2, #bfaffc); */
+  background: linear-gradient(to bottom right, #b3e5fc, #f2ffe0, #e0f7fa);
+}
+
+.layout-css-cards {
   background: linear-gradient(to bottom right, #b3e5fc, #f2ffe0, #e0f7fa);
 }
 
 .universal-heading {
   background-image: linear-gradient(
     to top right,
-    #fcd34d,
-    #06b6d4
-  ); /* Fallback gradient */
+    #fef08a,
+    #018aa2
+  ); /* Gradient from yellow to cyan */
   color: transparent;
   background-clip: text;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
   -webkit-background-clip: text;
 }
 

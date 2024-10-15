@@ -1,5 +1,6 @@
-import React from "react";
 import ScienceCard from "../../../components/ExploreCareerPath/Science/ScienceCard";
+import { useGetScienceCareerPathQuery } from "../../../features/ExploreCareerPath/exploreCareerPathApi";
+import Container from "../../../Shared/Container";
 
 const data = [
   {
@@ -53,20 +54,39 @@ const data = [
 ];
 
 const Science = () => {
+  // ---------------------------Data query here -------------------------------------
+  const {
+    data: scienceFields,
+    isLoading,
+    isError,
+  } = useGetScienceCareerPathQuery();
+
+  // ----------------------------------------------------------------
   return (
     <>
-      <div className="container mb-12">
-        <div>
-          <h2 className="text-3xl font-bold text-center mb-8 mt-12">
-            Fields of Science
-          </h2>
+      <Container>
+        <div className="mb-12">
+          {/* Heading and Description */}
+          <div className="text-center my-10">
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+              Fields of Science
+            </h1>
+            <div className="">
+              <p className="text-lg lg:text-xl text-gray-500">
+                Embark on a journey to explore exciting career paths tailored to
+                your passion and potential. Choose your track, and unlock
+                endless possibilities in Science, Arts, or Commerce.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:mt-20 items-center">
+            {scienceFields?.map((item) => (
+              <ScienceCard key={item.id} item={item} />
+            ))}
+          </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-center">
-          {data.map((item) => (
-            <ScienceCard key={item.id} item={item} />
-          ))}
-        </div>
-      </div>
+      </Container>
     </>
   );
 };

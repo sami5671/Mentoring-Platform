@@ -5,6 +5,7 @@ import Home from "../Pages/Home/Home";
 import TrackPath from "../Pages/ExploreCareerPath/Trackpath";
 import Science from "../Pages/ExploreCareerPath/Science/Science";
 import Commerce from "../Pages/ExploreCareerPath/Commerce/Commerce";
+import IndivisualField from "../Pages/ExploreCareerPath/Science/IndivisualField";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
       {
         path: "/science",
         element: <Science />,
+      },
+      {
+        path: "/science/:id",
+        element: <IndivisualField />,
       },
       {
         path: "/commerce",

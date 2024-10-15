@@ -1,6 +1,5 @@
 [
   {
-    "_id": ObjectId("64c54f123456789012345678"),
     "fieldName": "Engineering and Technology",
     "description": "The name of the engine that will be used to create the engine for the application",
     "wings": [
@@ -8,18 +7,16 @@
         "wingName": "Artificial Intelligence",
         "jobOpportunities": [
           {
-            "AI Researcher": {
-              "globalSalary": "$1,000,000",
-              "localSalary": "$50,000",
-              "higherStudies": "Master's in Artificial Intelligence"
-            }
+            "jobTitle": "AI Researcher",
+            "globalSalary": "$1,000,000",
+            "localSalary": "$50,000",
+            "higherStudies": "Master's in Artificial Intelligence"
           },
           {
-            "Machine Learning Engineer": {
-              "globalSalary": "$800,000",
-              "localSalary": "$80,000",
-              "higherStudies": "Master's in Machine Learning"
-            }
+            "jobTitle": "Machine Learning Engineer",
+            "globalSalary": "$800,000",
+            "localSalary": "$80,000",
+            "higherStudies": "Master's in Machine Learning"
           }
         ]
       },
@@ -27,32 +24,28 @@
         "wingName": "Environmental Engineering",
         "jobOpportunities": [
           {
-            "Environmental Consultant": {
-              "globalSalary": "$85,000",
-              "localSalary": "$25,000",
-              "higherStudies": "Master's in Environmental Science"
-            }
+            "jobTitle": "Environmental Consultant",
+            "globalSalary": "$85,000",
+            "localSalary": "$25,000",
+            "higherStudies": "Master's in Environmental Science"
           },
           {
-            "Water Resources Engineer": {
-              "globalSalary": "$90,000",
-              "localSalary": "$30,000",
-              "higherStudies": "Master's in Water Resources Engineering"
-            }
+            "jobTitle": "Water Resources Engineer",
+            "globalSalary": "$90,000",
+            "localSalary": "$30,000",
+            "higherStudies": "Master's in Water Resources Engineering"
           },
           {
-            "Sustainability Specialist": {
-              "globalSalary": "$80,000",
-              "localSalary": "$28,000",
-              "higherStudies": "Master's in Sustainable Development"
-            }
+            "jobTitle": "Sustainability Specialist",
+            "globalSalary": "$80,000",
+            "localSalary": "$28,000",
+            "higherStudies": "Master's in Sustainable Development"
           }
         ]
       }
     ]
   },
   {
-    "_id": ObjectId("64c54f123456789012345678"),
     "fieldName": "Medical and Health Sciences",
     "description": "A field that focuses on the study of human health, medical research, and healthcare practices.",
     "wings": [
@@ -60,18 +53,16 @@
         "wingName": "Public Health",
         "jobOpportunities": [
           {
-            "Epidemiologist": {
-              "globalSalary": "$70,000",
-              "localSalary": "$20,000",
-              "higherStudies": "Master's in Public Health"
-            }
+            "jobTitle": "Epidemiologist",
+            "globalSalary": "$70,000",
+            "localSalary": "$20,000",
+            "higherStudies": "Master's in Public Health"
           },
           {
-            "Health Policy Analyst": {
-              "globalSalary": "$85,000",
-              "localSalary": "$30,000",
-              "higherStudies": "Master's in Health Policy"
-            }
+            "jobTitle": "Health Policy Analyst",
+            "globalSalary": "$85,000",
+            "localSalary": "$30,000",
+            "higherStudies": "Master's in Health Policy"
           }
         ]
       },
@@ -79,25 +70,22 @@
         "wingName": "Clinical Research",
         "jobOpportunities": [
           {
-            "Clinical Research Coordinator": {
-              "globalSalary": "$60,000",
-              "localSalary": "$18,000",
-              "higherStudies": "Master's in Clinical Research"
-            }
+            "jobTitle": "Clinical Research Coordinator",
+            "globalSalary": "$60,000",
+            "localSalary": "$18,000",
+            "higherStudies": "Master's in Clinical Research"
           },
           {
-            "Medical Scientist": {
-              "globalSalary": "$95,000",
-              "localSalary": "$40,000",
-              "higherStudies": "PhD in Medical Science"
-            }
+            "jobTitle": "Medical Scientist",
+            "globalSalary": "$95,000",
+            "localSalary": "$40,000",
+            "higherStudies": "PhD in Medical Science"
           }
         ]
       }
     ]
   },
   {
-    "_id": ObjectId("64c54f123456789012345678"),
     "fieldName": "Agricultural and Veterinary Sciences",
     "description": "This field involves the study of agriculture, animal sciences, and sustainable farming practices.",
     "wings": [
@@ -105,18 +93,16 @@
         "wingName": "Agriculture",
         "jobOpportunities": [
           {
-            "Agronomist": {
-              "globalSalary": "$75,000",
-              "localSalary": "$22,000",
-              "higherStudies": "Master's in Agronomy"
-            }
+            "jobTitle": "Agronomist",
+            "globalSalary": "$75,000",
+            "localSalary": "$22,000",
+            "higherStudies": "Master's in Agronomy"
           },
           {
-            "Farm Manager": {
-              "globalSalary": "$65,000",
-              "localSalary": "$18,000",
-              "higherStudies": "Master's in Farm Management"
-            }
+            "jobTitle": "Farm Manager",
+            "globalSalary": "$65,000",
+            "localSalary": "$18,000",
+            "higherStudies": "Master's in Farm Management"
           }
         ]
       },
@@ -124,18 +110,16 @@
         "wingName": "Veterinary Science",
         "jobOpportunities": [
           {
-            "Veterinarian": {
-              "globalSalary": "$90,000",
-              "localSalary": "$35,000",
-              "higherStudies": "Doctor of Veterinary Medicine (DVM)"
-            }
+            "jobTitle": "Veterinarian",
+            "globalSalary": "$90,000",
+            "localSalary": "$35,000",
+            "higherStudies": "Doctor of Veterinary Medicine (DVM)"
           },
           {
-            "Animal Nutritionist": {
-              "globalSalary": "$70,000",
-              "localSalary": "$25,000",
-              "higherStudies": "Master's in Animal Science"
-            }
+            "jobTitle": "Animal Nutritionist",
+            "globalSalary": "$70,000",
+            "localSalary": "$25,000",
+            "higherStudies": "Master's in Animal Science"
           }
         ]
       }
@@ -201,4 +185,3 @@
 //  | + managePayments()|              | + recommendPath()     |
 //  | + overseeSystem() |              | + trackProgress()     |
 //  +------------------+               +----------------------+
-
