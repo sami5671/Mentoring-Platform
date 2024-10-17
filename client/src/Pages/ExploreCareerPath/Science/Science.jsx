@@ -68,10 +68,8 @@ const Science = () => {
         <div className="mb-12">
           {/* Heading and Description */}
           <div className="text-center my-10">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-              Fields of Science
-            </h1>
-            <div className="">
+            <h1 className="universal-heading lg:text-5xl">Fields of Science</h1>
+            <div className="text-balance text-center lg:px-44">
               <p className="text-lg lg:text-xl text-gray-500">
                 Embark on a journey to explore exciting career paths tailored to
                 your passion and potential. Choose your track, and unlock

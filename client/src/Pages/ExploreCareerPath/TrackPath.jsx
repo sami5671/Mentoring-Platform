@@ -34,8 +34,10 @@ const TrackPath = () => {
     <Container>
       {/* Heading and Description */}
       <div className="text-center my-10">
-        <h1 className="universal-heading">Discover Your Future Path</h1>
-        <div className="lg:max-w-fit">
+        <h1 className="universal-heading text-5xl">
+          Discover Your Future Path
+        </h1>
+        <div className="text-start text-balance lg:text-center lg:px-44">
           <p className="text-lg lg:text-xl text-gray-600">
             Embark on a journey to explore exciting career paths tailored to
             your passion and potential. Choose your track, and unlock endless
