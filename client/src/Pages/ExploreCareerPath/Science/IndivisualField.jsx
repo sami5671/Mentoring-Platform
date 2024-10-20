@@ -1,77 +1,78 @@
 import { useGetSciencePathByIdQuery } from "../../../features/ExploreCareerPath/exploreCareerPathApi";
 import Container from "../../../Shared/Container";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import {
+  selectedSubjectName,
+  selectedTag,
   setCategories,
-  setSearchTerm,
-  setSelectedCategory,
 } from "../../../features/ExploreCareerPath/ExploreCareerPathSlice";
-import { Input, Select } from "rizzui";
+import { FaWpexplorer } from "react-icons/fa6";
 
 const IndivisualField = () => {
   const { id } = useParams();
-  const dispatch = useDispatch();
-  const { data: field, isLoading, isError } = useGetSciencePathByIdQuery(id);
-  const { categories, filteredCategories, searchTerm, selectedCategory } =
-    useSelector((state) => state.exploreCareerPath);
 
-  const [selectValue, setSelectValue] = useState(null);
+  const dispatch = useDispatch();
+  const {
+    data: field,
+    isLoading,
+    isError,
+    isSuccess,
+  } = useGetSciencePathByIdQuery(id);
 
   // Fetch data and dispatch categories to Redux
   useEffect(() => {
-    if (field) {
-      dispatch(setCategories(field.wings));
+    if (isSuccess) {
+      dispatch(setCategories(field));
     }
-  }, [dispatch, field]);
+  }, [dispatch, field, isSuccess]);
 
-  // Map categories to options for Select dropdown
-  const selectOptions = categories?.map((category) => ({
-    label: category.wingName,
-    value: category.wingName,
-  }));
-
-  // Handle Search input change and dispatch search term to Redux
-  const handleSearchChange = (e) => {
-    dispatch(setSearchTerm(e.target.value)); // Dispatch search term to redux
+  const handleTagClick = (tag, subjectName) => {
+    console.log(tag, subjectName);
+    dispatch(selectedTag(tag));
+    dispatch(selectedSubjectName(subjectName));
   };
-  // Handle Select dropdown change and update selectedCategory in Redux
-  const handleSelectChange = (selected) => {
-    setSelectValue(selected); // Update local state for the selected value
-    dispatch(setSelectedCategory(selected.value)); // Dispatch selected category to redux
-  };
-
+  console.log(field);
   return (
     <Container>
       <div>
-        <h1 className="universal-heading lg:text-5=4xl text-2xl mt-8 lg:mt-8 font-bold mb-6">
+        <h1 className="universal-heading lg:text-5xl text-2xl mt-8 lg:mt-8 font-bold mb-6">
           {field?.fieldName}
         </h1>
       </div>
 
-      {/* ----filtering------ */}
-      <div className="flex justify-center gap-4">
-        <div className="w-1/2">
-          <Input
-            label="Search For Findings"
-            placeholder="Search here for find your path"
-            inputClassName="border-slate-700 bg-white"
-            value={searchTerm} // Bind to the Redux search term state
-            onChange={handleSearchChange} // Trigger search when user types
-          />
-        </div>
+      {/* cards */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 mt-12 gap-4">
+        {field?.subject?.map((item) => (
+          <div
+            key={item?.tag}
+            className="border border-gray-300 rounded-lg w-full h-[420px] shadow-2xl layout-css-cards hover:shadow-xl transition-shadow duration-300 relative"
+          >
+            <img
+              src={item?.image}
+              alt="field"
+              className="shadow-2xl w-full h-[200px]"
+            />
+            <h3 className="text-2xl font-bold h-20 mt-10 text-center">
+              {item?.subjectName}
+            </h3>
 
-        <div className="w-1/2">
-          <Select
-            label="Select Your Path"
-            options={selectOptions} // Use dynamically filtered options
-            onChange={handleSelectChange}
-            value={selectValue}
-            selectClassName="border-slate-700 bg-white"
-            dropdownClassName="w-1/3 h-[100px] gap-2 flex flex-col bg-white"
-          />
-        </div>
+            <div className="absolute bottom-0 left-0 right-0 px-6 py-4 flex justify-center items-center">
+              <Link to={`/wingDetails/${id}`}>
+                <button
+                  onClick={() => handleTagClick(item?.tag, item?.subjectName)}
+                  className="universal-button w-full"
+                >
+                  <span className="hover-bg"></span> {/* Hover background */}
+                  <span className="content">
+                    Explore <FaWpexplorer className="text-xl" />
+                  </span>
+                </button>
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
     </Container>
   );

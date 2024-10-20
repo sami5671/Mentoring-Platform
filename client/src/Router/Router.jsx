@@ -6,6 +6,7 @@ import TrackPath from "../Pages/ExploreCareerPath/Trackpath";
 import Science from "../Pages/ExploreCareerPath/Science/Science";
 import Commerce from "../Pages/ExploreCareerPath/Commerce/Commerce";
 import IndivisualField from "../Pages/ExploreCareerPath/Science/IndivisualField";
+import WingDetails from "../Pages/ExploreCareerPath/Science/WingDetails";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/science/:id",
         element: <IndivisualField />,
+      },
+      {
+        path: "/wingDetails/:id",
+        element: <WingDetails />,
       },
       {
         path: "/commerce",

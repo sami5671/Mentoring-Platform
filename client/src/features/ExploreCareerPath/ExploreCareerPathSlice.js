@@ -2,9 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   categories: [],
-  filteredCategories: [],
-  searchTerm: "",
-  selectedCategory: null,
+  filteredCategories: [], // New state for filtered data
+  tag: [], // Current selected tag(s)
+  subjectName: "",
 };
 
 const exploreCareerPathSlice = createSlice({
@@ -13,23 +13,22 @@ const exploreCareerPathSlice = createSlice({
   reducers: {
     setCategories: (state, action) => {
       state.categories = action.payload;
-      state.filteredCategories = action.payload;
+      state.filteredCategories = action.payload.wings;
     },
-    setSearchTerm: (state, action) => {
-      state.searchTerm = action.payload;
-      state.filteredCategories = state.categories.filter((category) =>
-        category.wingName.toLowerCase().includes(action.payload.toLowerCase())
+    selectedTag: (state, action) => {
+      state.tag = action.payload;
+
+      // Filter the filteredCategories based on the selected tag
+      state.filteredCategories = state.categories.wings.filter((wing) =>
+        wing.tag.some((tag) => action.payload.includes(tag))
       );
     },
-    setSelectedCategory: (state, action) => {
-      state.selectedCategory = action.payload;
-      state.filteredCategories = state.categories.filter((category) =>
-        category.wingName.toLowerCase().includes(action.payload.toLowerCase())
-      );
+    selectedSubjectName: (state, action) => {
+      state.subjectName = action.payload;
     },
   },
 });
 
-export const { setCategories, setSearchTerm, setSelectedCategory } =
+export const { setCategories, selectedTag, selectedSubjectName } =
   exploreCareerPathSlice.actions;
 export default exploreCareerPathSlice.reducer;

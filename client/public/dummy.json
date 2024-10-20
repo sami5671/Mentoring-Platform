@@ -1,50 +1,157 @@
 [
   {
-    "_id": ObjectId("64c54f123456789012345678"),
     "fieldName": "Engineering and Technology",
     "description": "The name of the engine that will be used to create the engine for the application",
+    "imageUrl": "https://i.pinimg.com/originals/6f/06/3b/6f063b9b05a88b89b2e8f4c6e74d5059.png",
+    "subject": [
+      {
+        "tag": "T_CSE",
+        "subjectName": "Computer Science & Engineering",
+        "image": "https://padhaee.in/wp-content/uploads/2011/10/computer-engineering.png"
+      },
+      {
+        "tag": "T_SWE",
+        "subjectName": "Software Engineer",
+        "image": "https://www.theladders.com/wp-content/uploads/coder_190517-800x450.jpg"
+      },
+      {
+        "tag": "T_CIS",
+        "subjectName": "Computing & Information System",
+        "image": "https://www.device42.com/blog/wp-content/uploads/2023/03/14_01edge-cloud-computing-900x600.jpg"
+      },
+      {
+        "tag": "T_AGR",
+        "subjectName": "Agricultural Engineering",
+        "image": "https://media.licdn.com/dms/image/D5612AQGQGCl-_rxD7g/article-cover_image-shrink_600_2000/0/1693341020141?e=2147483647&v=beta&t=tvVlFr6uJgbZNDInrEOlD2G1QxQUtpEPco1HqWMyCIU"
+      },
+      {
+        "tag": "T_ITM",
+        "subjectName": "Information Technology & Management",
+        "image": "https://img.favpng.com/7/15/23/it-infrastructure-it-service-management-information-technology-png-favpng-RUguga5ke6W5rEAxLBapxpa01.jpg"
+      },
+      {
+        "tag": "T_CE",
+        "subjectName": "Civil Engineering",
+        "image": "https://www.andersoneng.com/wp-content/uploads/2024/05/engineer.jpg"
+      },
+      {
+        "tag": "T_ME",
+        "subjectName": "Mechanical Engineering",
+        "image": "https://facts.net/wp-content/uploads/2023/12/11-mechanical-engineer-fun-facts-1701630219.jpg"
+      },
+      {
+        "tag": "T_EE",
+        "subjectName": "Electrical Engineering",
+        "image": "https://media.licdn.com/dms/image/D4D12AQH4HM4FW3wsNw/article-cover_image-shrink_600_2000/0/1685191574872?e=2147483647&v=beta&t=ZMA1uP4OwSi4O5rwLfFuaTa5syBz61TM_2BUmOuUUZs"
+      },
+      {
+        "tag": "T_AE",
+        "subjectName": "Aerospace Engineering",
+        "image": "https://www.planitplus.net/JobProfileImages/69.png"
+      },
+      {
+        "tag": "T_CHE",
+        "subjectName": "Chemical Engineering",
+        "image": "https://cgu-odisha.ac.in/wp-content/uploads/2023/05/Chemical-Engineering-2-1024x682.jpeg"
+      },
+      {
+        "tag": "T_BME",
+        "subjectName": "Biomedical Engineering",
+        "image": "https://eambes.org/wp-content/uploads/2021/06/1.jpg"
+      },
+      {
+        "tag": "T_ENVE",
+        "subjectName": "Environmental Engineering",
+        "image": "https://primusworkforce.com/wp-content/uploads/2022/09/What-does-an-environmental-engineer-do.jpg"
+      },
+      {
+        "tag": "T_ECE",
+        "subjectName": "Electronic Engineering",
+        "image": "https://www.monash.edu.my/__data/assets/image/0006/3439176/electrocic-engineer-fixes-electronic-equipment.jpg"
+      }
+    ],
     "wings": [
       {
         "wingName": "Artificial Intelligence",
+        "tag": ["T_CSE", "T_SWE", "T_CIS"],
         "jobOpportunities": [
           {
-            "AI Researcher": {
-              "globalSalary": "$1,000,000",
-              "localSalary": "$50,000",
-              "higherStudies": "Master's in Artificial Intelligence"
+            "jobTitle": "AI Researcher",
+            "globalSalary": "$1,000,000",
+            "localSalary": "$50,000"
+          },
+          {
+            "jobTitle": "Machine Learning Engineer",
+            "globalSalary": "$800,000",
+            "localSalary": "$80,000"
+          }
+        ],
+        "higherStudies": [
+          {
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           },
           {
-            "Machine Learning Engineer": {
-              "globalSalary": "$800,000",
-              "localSalary": "$80,000",
-              "higherStudies": "Master's in Machine Learning"
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           }
         ]
       },
       {
-        "wingName": "Environmental Engineering",
+        "wingName": "Robotics in AI",
+        "tag": ["T_CSE", "T_SWE"],
         "jobOpportunities": [
           {
-            "Environmental Consultant": {
-              "globalSalary": "$85,000",
-              "localSalary": "$25,000",
-              "higherStudies": "Master's in Environmental Science"
+            "jobTitle": "AI Researcher",
+            "globalSalary": "$1,000,000",
+            "localSalary": "$50,000"
+          },
+          {
+            "jobTitle": "Machine Learning Engineer",
+            "globalSalary": "$800,000",
+            "localSalary": "$80,000"
+          }
+        ],
+        "higherStudies": [
+          {
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           },
           {
-            "Water Resources Engineer": {
-              "globalSalary": "$90,000",
-              "localSalary": "$30,000",
-              "higherStudies": "Master's in Water Resources Engineering"
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
+            }
+          }
+        ]
+      },
+      {
+        "wingName": "Information Management System",
+        "tag": ["T_ITM"],
+        "jobOpportunities": [
+          {
+            "jobTitle": "Information Manager",
+            "globalSalary": "$1,000,000",
+            "localSalary": "$50,000"
+          }
+        ],
+        "higherStudies": [
+          {
+            "masters": {
+              "degrees": ["MSC in ITM", "MSC in ...."],
+              "research": ["PHD in ITM"]
             }
           },
           {
-            "Sustainability Specialist": {
-              "globalSalary": "$80,000",
-              "localSalary": "$28,000",
-              "higherStudies": "Master's in Sustainable Development"
+            "masters": {
+              "degrees": ["MSC in ITM", "MSC in ...."],
+              "research": ["PHD in ITM"]
             }
           }
         ]
@@ -52,44 +159,58 @@
     ]
   },
   {
-    "_id": ObjectId("64c54f123456789012345678"),
     "fieldName": "Medical and Health Sciences",
-    "description": "A field that focuses on the study of human health, medical research, and healthcare practices.",
-    "wings": [
+    "description": "The name of the engine that will be used to create the engine for the application",
+    "imageUrl": "https://i.pinimg.com/originals/6f/06/3b/6f063b9b05a88b89b2e8f4c6e74d5059.png",
+    "subject": [
       {
-        "wingName": "Public Health",
-        "jobOpportunities": [
-          {
-            "Epidemiologist": {
-              "globalSalary": "$70,000",
-              "localSalary": "$20,000",
-              "higherStudies": "Master's in Public Health"
-            }
-          },
-          {
-            "Health Policy Analyst": {
-              "globalSalary": "$85,000",
-              "localSalary": "$30,000",
-              "higherStudies": "Master's in Health Policy"
-            }
-          }
-        ]
+        "tag": "T_CSE",
+        "subjectName": "Computer Science & Engineering",
+        "image": "https://padhaee.in/wp-content/uploads/2011/10/computer-engineering.png"
       },
       {
-        "wingName": "Clinical Research",
+        "tag": "T_SWE",
+        "subjectName": "Software Engineer",
+        "image": "https://www.theladders.com/wp-content/uploads/coder_190517-800x450.jpg"
+      },
+      {
+        "tag": "T_CIS",
+        "subjectName": "Computing & Information System",
+        "image": "https://www.device42.com/blog/wp-content/uploads/2023/03/14_01edge-cloud-computing-900x600.jpg"
+      },
+      {
+        "tag": "T_ITM",
+        "subjectName": "Information Technology & Management",
+        "image": "https://img.favpng.com/7/15/23/it-infrastructure-it-service-management-information-technology-png-favpng-RUguga5ke6W5rEAxLBapxpa01.jpg"
+      }
+    ],
+    "wings": [
+      {
+        "wingName": "Artificial Intelligence",
+        "tag": ["T_CSE", "T_SWE", "T_CIS"],
         "jobOpportunities": [
           {
-            "Clinical Research Coordinator": {
-              "globalSalary": "$60,000",
-              "localSalary": "$18,000",
-              "higherStudies": "Master's in Clinical Research"
+            "jobTitle": "AI Researcher",
+            "globalSalary": "$1,000,000",
+            "localSalary": "$50,000"
+          },
+          {
+            "jobTitle": "Machine Learning Engineer",
+            "globalSalary": "$800,000",
+            "localSalary": "$80,000"
+          }
+        ],
+        "higherStudies": [
+          {
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           },
           {
-            "Medical Scientist": {
-              "globalSalary": "$95,000",
-              "localSalary": "$40,000",
-              "higherStudies": "PhD in Medical Science"
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           }
         ]
@@ -97,44 +218,58 @@
     ]
   },
   {
-    "_id": ObjectId("64c54f123456789012345678"),
     "fieldName": "Agricultural and Veterinary Sciences",
-    "description": "This field involves the study of agriculture, animal sciences, and sustainable farming practices.",
-    "wings": [
+    "description": "The name of the engine that will be used to create the engine for the application",
+    "imageUrl": "https://i.pinimg.com/originals/6f/06/3b/6f063b9b05a88b89b2e8f4c6e74d5059.png",
+    "subject": [
       {
-        "wingName": "Agriculture",
-        "jobOpportunities": [
-          {
-            "Agronomist": {
-              "globalSalary": "$75,000",
-              "localSalary": "$22,000",
-              "higherStudies": "Master's in Agronomy"
-            }
-          },
-          {
-            "Farm Manager": {
-              "globalSalary": "$65,000",
-              "localSalary": "$18,000",
-              "higherStudies": "Master's in Farm Management"
-            }
-          }
-        ]
+        "tag": "T_CSE",
+        "subjectName": "Computer Science & Engineering",
+        "image": "https://padhaee.in/wp-content/uploads/2011/10/computer-engineering.png"
       },
       {
-        "wingName": "Veterinary Science",
+        "tag": "T_SWE",
+        "subjectName": "Software Engineer",
+        "image": "https://www.theladders.com/wp-content/uploads/coder_190517-800x450.jpg"
+      },
+      {
+        "tag": "T_CIS",
+        "subjectName": "Computing & Information System",
+        "image": "https://www.device42.com/blog/wp-content/uploads/2023/03/14_01edge-cloud-computing-900x600.jpg"
+      },
+      {
+        "tag": "T_ITM",
+        "subjectName": "Information Technology & Management",
+        "image": "https://img.favpng.com/7/15/23/it-infrastructure-it-service-management-information-technology-png-favpng-RUguga5ke6W5rEAxLBapxpa01.jpg"
+      }
+    ],
+    "wings": [
+      {
+        "wingName": "Artificial Intelligence",
+        "tag": ["T_CSE", "T_SWE", "T_CIS"],
         "jobOpportunities": [
           {
-            "Veterinarian": {
-              "globalSalary": "$90,000",
-              "localSalary": "$35,000",
-              "higherStudies": "Doctor of Veterinary Medicine (DVM)"
+            "jobTitle": "AI Researcher",
+            "globalSalary": "$1,000,000",
+            "localSalary": "$50,000"
+          },
+          {
+            "jobTitle": "Machine Learning Engineer",
+            "globalSalary": "$800,000",
+            "localSalary": "$80,000"
+          }
+        ],
+        "higherStudies": [
+          {
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           },
           {
-            "Animal Nutritionist": {
-              "globalSalary": "$70,000",
-              "localSalary": "$25,000",
-              "higherStudies": "Master's in Animal Science"
+            "masters": {
+              "degrees": ["MSC in AI", "MSC in ...."],
+              "research": ["PHD in Ai"]
             }
           }
         ]
@@ -142,63 +277,3 @@
     ]
   }
 ]
-
-//  +-------------------+           +--------------------+           +-------------------+
-//  |      User         |           |      Mentor        |           |      Mentee        |
-//  +-------------------+           +--------------------+           +-------------------+
-//  | - userId          |           | - mentorId         |           | - menteeId         |
-//  | - name            |           | - expertise        |           | - goals            |
-//  | - email           |           | - experience       |           | - enrolledPackages |
-//  | - password        |           | - skills           |           | - progress         |
-//  | - role            |           | - rating           |           | - feedback         |
-//  +-------------------+           +--------------------+           +-------------------+
-//  | + login()         |           | + createPackage()  |           | + searchMentor()   |
-//  | + logout()        |           | + setSchedule()    |           | + requestMentor()  |
-//  | + updateProfile() |           | + provideFeedback()|           | + accessRoadmap()  |
-//  +-------------------+           +--------------------+           +-------------------+
-//  +------------------+               +----------------------+
-//  |    Package       |               |     Roadmap          |
-//  +------------------+               +----------------------+
-//  | - packageId      |               | - roadmapId          |
-//  | - title          |               | - schedule           |
-//  | - description    |               | - milestones         |
-//  | - price          |               | - resources          |
-//  +------------------+               +----------------------+
-//  | + createPackage()|               | + updateMilestone()   |
-//  | + updatePackage()|               | + accessResources()   |
-//  | + deletePackage()|               | + viewSchedule()      |
-//  +------------------+               +----------------------+
-//  +------------------+               +----------------------+
-//  |    Payment       |               |    AI Assistant       |
-//  +------------------+               +----------------------+
-//  | - paymentId      |               | - queryId            |
-//  | - amount         |               | - response           |
-//  | - paymentStatus  |               |                      |
-//  +------------------+               +----------------------+
-//  | + processPayment()|              | + answerFAQ()         |
-//  | + viewInvoice()  |               | + recommendMentor()   |
-//  | + refundPayment()|               | + provideCareerAdvice()|
-//  +------------------+               +----------------------+
-//  +------------------+               +----------------------+
-//  |    Feedback      |               |    Reward            |
-//  +------------------+               +----------------------+
-//  | - feedbackId     |               | - rewardId           |
-//  | - rating         |               | - rewardPoints       |
-//  | - comment        |               |                      |
-//  +------------------+               +----------------------+
-//  | + giveFeedback() |               | + issueReward()       |
-//  | + viewFeedback() |               | + redeemReward()      |
-//  +------------------+               +----------------------+
-//  +------------------+               +----------------------+
-//  |    Admin         |               |    CareerPath        |
-//  +------------------+               +----------------------+
-//  | - adminId        |               | - pathId             |
-//  | - userList       |               | - name               |
-//  | - mentorRequests |               | - institutes         |
-//  | - payments       |               | - opportunities      |
-//  +------------------+               +----------------------+
-//  | + verifyMentor() |               | + exploreOpportunities|
-//  | + managePayments()|              | + recommendPath()     |
-//  | + overseeSystem() |              | + trackProgress()     |
-//  +------------------+               +----------------------+
-
