@@ -1,56 +1,43 @@
 const jwt = require("jsonwebtoken");
+const axios = require("axios");
 const { client } = require("../config/db");
-const usersCollection = client.db("TubeNest").collection("users");
-
+const { oauth2client } = require("../utils/googleConfig");
+const usersCollection = client.db("MentiGo").collection("users");
 // Register User
-const registerUser = async (req, res) => {
-  const user = req.body;
-  const query = { email: user.email };
-
-  try {
-    const isExist = await usersCollection.findOne(query);
-    if (isExist) {
-      return res.status(409).send({ message: "User already exists" });
-    } else {
-      const result = await usersCollection.insertOne(user);
-      const userData = await usersCollection.findOne(query);
-
-      return res.send(userData);
-      // Send back the new user data to the client
-    }
-  } catch (error) {
-    return res
-      .status(500)
-      .send({ message: "Server error", error: error.message });
-  }
-};
 
 // Login User
-const loginUser = async (req, res) => {
-  const user = req.body;
-  const query = { email: user.email };
-
-  const isExist = await usersCollection.findOne(query);
-  if (isExist && isExist.password === user.password) {
-    const logInUser = {
-      _id: isExist.insertedId,
-      name: isExist.name,
-      email: isExist.email,
-      image: isExist.image,
-      status: isExist.status,
-    };
-    return res.send(logInUser);
-  } else {
-    return res.status(404).send({ message: "Invalid credentials" });
+const googleLogin = async (req, res) => {
+  try {
+    const { code } = req.query;
+    const googleRes = await oauth2client.getToken(code);
+    oauth2client.setCredentials(googleRes.tokens);
+    const userRes = await axios.get(
+      `https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${googleRes.tokens.access_token}`
+    );
+    const { email, id, name, picture } = userRes.data;
+    const existingUser = await usersCollection.findOne({ email });
+    if (existingUser) {
+      return res.json({
+        message: "User already exists",
+        user: existingUser,
+      });
+    } else {
+      const user = {
+        email,
+        name,
+        googleID: id,
+        image: picture,
+        status: "user",
+      };
+      const result = await usersCollection.insertOne(user);
+      return res.json({
+        message: "User registered successfully",
+        user,
+      });
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
 
-const generateToken = (req, res) => {
-  const user = req.body;
-  const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: "1h",
-  });
-  res.send(token);
-};
-
-module.exports = { registerUser, loginUser, generateToken };
+module.exports = { googleLogin };

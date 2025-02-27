@@ -5,8 +5,10 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
-
+import { useGoogleLogin } from "@react-oauth/google";
+import { useGoogleLoginMutation } from "../../../features/auth/authApi";
 const Login = () => {
+  const [googleLogin] = useGoogleLoginMutation();
   const slides = [
     {
       logo: "MentiGo",
@@ -24,7 +26,22 @@ const Login = () => {
       text: "Explore, Learn, and Grow",
     },
   ];
+  const responseGoogle = async (authResult) => {
+    try {
+      if (authResult.code) {
+        const user = await googleLogin(authResult.code).unwrap();
+        console.log("Google login successful:", user);
+      }
+    } catch (error) {
+      console.error("Google login error:", error);
+    }
+  };
 
+  const googleSignIn = useGoogleLogin({
+    onSuccess: responseGoogle,
+    onError: responseGoogle,
+    flow: "auth-code",
+  });
   return (
     <div className="flex items-center justify-center max-h-screen lg:py-24 font-quickSandFont">
       <div className="w-full max-w-4xl bg-gray-800 shadow-xl rounded-xl flex overflow-hidden">
@@ -134,7 +151,10 @@ const Login = () => {
 
             {/* Social Login Buttons */}
             <div className="flex gap-4">
-              <button className="flex-1 bg-white hover:bg-gray-300 py-3 rounded-md text-black font-bold  flex items-center justify-center">
+              <button
+                onClick={() => googleSignIn()}
+                className="flex-1 bg-white hover:bg-gray-300 py-3 rounded-md text-black font-bold  flex items-center justify-center"
+              >
                 <img
                   src="../../../../public/images/google.png"
                   className="w-5 h-5 mr-2"

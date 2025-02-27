@@ -6,6 +6,7 @@ const { connectDB } = require("./config/db");
 const app = express();
 const port = process.env.PORT || 9000;
 
+const authRoutes = require("./routes/authRoutes");
 const scienceCareerRoutes = require("./routes/ScienceCareerRoutes");
 
 const corsOptions = {
@@ -17,6 +18,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
+app.use("/auth", authRoutes);
 app.use("/exploreScienceCareer", scienceCareerRoutes);
 
 app.get("/", (req, res) => {
