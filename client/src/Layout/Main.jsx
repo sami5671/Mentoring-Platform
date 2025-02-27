@@ -4,7 +4,7 @@ import { NavbarComponent } from "./../Shared/Navbar/NavbarComponent";
 
 const Main = () => {
   return (
-    <div className="layout-css">
+    <div className="relative min-h-screen font-quickSandFont">
       <NavbarComponent />
       <div className="min-h-[calc(100vh-68px)]">
         <Outlet />

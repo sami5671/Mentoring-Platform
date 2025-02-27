@@ -7,6 +7,8 @@ import Science from "../Pages/ExploreCareerPath/Science/Science";
 import Commerce from "../Pages/ExploreCareerPath/Commerce/Commerce";
 import IndivisualField from "../Pages/ExploreCareerPath/Science/IndivisualField";
 import WingDetails from "../Pages/ExploreCareerPath/Science/WingDetails";
+import Login from "../Pages/Auth/Login/Login";
+import Register from "../Pages/Auth/Register/Register";
 
 export const router = createBrowserRouter([
   {
@@ -39,5 +41,13 @@ export const router = createBrowserRouter([
         element: <Commerce />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
