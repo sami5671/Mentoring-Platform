@@ -27,3 +27,9 @@ body::before {
   ); /* Increase opacity for a darker effect */
   z-index: -1;
 }
+
+@font-face {
+  font-family: "Bangla";
+  src: url("./assets/bangla.ttf") format("opentype");
+  font-style: normal;
+}

@@ -52,7 +52,7 @@
       {
         "wingName": "Public Health",
         "jobOpportunities": [
-          {
+          {=
             "jobTitle": "Epidemiologist",
             "globalSalary": "$70,000",
             "localSalary": "$20,000",

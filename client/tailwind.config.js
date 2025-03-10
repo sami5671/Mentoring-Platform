@@ -8,6 +8,7 @@ const config = {
       fontFamily: {
         syncFont: ["Syne", "serif"],
         quickSandFont: ["Quicksand", "serif"],
+        bangla: ["Bangla", "serif"],
       },
     },
   },

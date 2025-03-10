@@ -9,6 +9,7 @@ import IndivisualField from "../Pages/ExploreCareerPath/Science/IndivisualField"
 import WingDetails from "../Pages/ExploreCareerPath/Science/WingDetails";
 import Login from "../Pages/Auth/Login/Login";
 import Register from "../Pages/Auth/Register/Register";
+import Survey from "../Pages/Survey/Survey";
 
 export const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: "/commerce",
         element: <Commerce />,
+      },
+      {
+        path: "/surveyForm",
+        element: <Survey />,
       },
     ],
   },
