@@ -415,6 +415,142 @@ const Survey = () => {
                 component="div"
                 className="text-red-500"
               />
+
+              <label className="block mt-2">
+                15. What is your preferred method for obtaining career guidance?
+                (ক্যারিয়ার পরামর্শ পাওয়ার জন্য আপনার পছন্দের পদ্ধতি কী?)
+              </label>
+              {[
+                " Online resources (অনলাইন সম্পদ)",
+                " Counselors/Professionals (পরামর্শদাতা/পেশাদার ব্যক্তিরা)",
+                " Family and friends (পরিবার এবং বন্ধুরা)",
+                " Other (please specify) (অন্যান্য (অনুগ্রহ করে উল্লেখ করুন))",
+              ].map((guidance) => (
+                <div key={guidance}>
+                  <Field
+                    type="checkbox"
+                    name="preferredGuidanceMethod"
+                    value={guidance}
+                  />
+                  {guidance}
+                </div>
+              ))}
+              <ErrorMessage
+                name="preferredGuidanceMethod"
+                component="div"
+                className="text-red-500"
+              />
+              <label className="block mt-2">
+                16. What type of career guidance would be most beneficial to
+                you? (আপনার জন্য কোন ধরণের ক্যারিয়ার পরামর্শ সবচেয়ে উপকারী
+                হবে?)
+              </label>
+              {[
+                " Detailed career roadmaps (বিস্তারিত ক্যারিয়ার রোডম্যাপ)",
+                " Access to industry professionals (বিশেষজ্ঞদের সাথে সংযোগের সুযোগ)",
+                " Regular assessments and feedback (নিয়মিত মূল্যায়ন এবং প্রতিক্রিয়া)",
+                " Other (please specify) (অন্যান্য (অনুগ্রহ করে উল্লেখ করুন))",
+              ].map((beneficial) => (
+                <div key={beneficial}>
+                  <Field
+                    type="checkbox"
+                    name="beneficialGuidance"
+                    value={beneficial}
+                  />
+                  {beneficial}
+                </div>
+              ))}
+              <ErrorMessage
+                name="beneficialGuidance"
+                component="div"
+                className="text-red-500"
+              />
+
+              <label className="block mt-2">
+                17. Do you think having access to a comprehensive career-roadmap
+                would be beneficial for you? (আপনার জন্য একটি বিস্তারিত
+                ক্যারিয়ার রোডম্যাপ কি উপকারী হবে বলে মনে করেন?)
+              </label>
+              {[
+                " Yes, very helpful (হ্যাঁ, অত্যন্ত সহায়ক)",
+                " I’m interested (আমি আগ্রহী)",
+                " No, not really (না, খুব একটা নয়)",
+              ].map((job) => (
+                <div key={job}>
+                  <Field type="radio" name="roadmapInterest" value={job} />
+                  {job}
+                </div>
+              ))}
+              <ErrorMessage
+                name="roadmapInterest"
+                component="div"
+                className="text-red-500"
+              />
+              <label className="block mt-2">
+                18. Would a platform that gives you all the necessary
+                information you need to move from where you are now to your
+                dream field be helpful to you? (একটি প্ল্যাটফর্ম যা আপনাকে
+                বর্তমান অবস্থান থেকে আপনার স্বপ্নের ক্যারিয়ারে পৌঁছাতে সহায়তা
+                করবে, তা আপনার জন্য কতটা উপকারী হবে?)
+              </label>
+              {[" Yes (হ্যাঁ)", " I’m not sure (আমি নিশ্চিত নই)"].map(
+                (roadmap) => (
+                  <div key={roadmap}>
+                    <Field
+                      type="radio"
+                      name="platformHelpfulness"
+                      value={roadmap}
+                    />
+                    {roadmap}
+                  </div>
+                )
+              )}
+              <ErrorMessage
+                name="platformHelpfulness"
+                component="div"
+                className="text-red-500"
+              />
+              <label className="block mt-2">
+                19. If your answer to the previous question was “yes”, would you
+                like a feature to be included there, that enables you to connect
+                with a professional mentor of your desired field who will guide
+                you throughout your journey? (আপনি যদি আগের প্রশ্নের উত্তরে
+                'হ্যাঁ' বলে থাকেন, তবে এমন একটি ফিচার পছন্দ করবেন কি, যা আপনাকে
+                আপনার পছন্দের ক্ষেত্রের একজন পেশাদার মেন্টরের সঙ্গে সংযোগের
+                সুযোগ দেবে?)
+              </label>
+              {[" Yes (হ্যাঁ)", " No (না)"].map((roadmap) => (
+                <div key={roadmap}>
+                  <Field type="radio" name="mentorFeature" value={roadmap} />
+                  {roadmap}
+                </div>
+              ))}
+              <ErrorMessage
+                name="mentorFeature"
+                component="div"
+                className="text-red-500"
+              />
+              <label className="block mt-2">
+                20. Would you be willing to pay for a real-time, personalized
+                career guidance by a professional? (একজন পেশাদারের কাছ থেকে
+                সরাসরি ব্যক্তিগত ক্যারিয়ার পরামর্শ নিতে আপনি কি অর্থ প্রদান
+                করতে ইচ্ছুক?)
+              </label>
+              {[
+                " Yes (হ্যাঁ)",
+                " Yes, but not a large fee (হ্যাঁ, তবে বড় ফি নয়)",
+                " No (না)",
+              ].map((roadmap) => (
+                <div key={roadmap}>
+                  <Field type="radio" name="willingToPay" value={roadmap} />
+                  {roadmap}
+                </div>
+              ))}
+              <ErrorMessage
+                name="willingToPay"
+                component="div"
+                className="text-red-500"
+              />
               <div className="flex justify-end mt-6">
                 <button
                   type="submit"
